@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "Helvetica Neue", Arial, sans-serif;
+}
+
+:root {
+  --bg: #0A0A0A;
+  --sidebar-bg: #111111;
+  --card-bg: #161616;
+  --ink: #E0E0E0;
+  --ink-dim: #666;
+  --accent: #E2B87E;
+  --line: #222;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+.elegant-card {
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  transition: border-color 0.3s ease;
+}
+
+.elegant-card:hover {
+  border-color: var(--accent);
+}
+
+.accent-line {
+  width: 40px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.micro-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--ink-dim);
+}
+
+input, textarea {
+  background: #000 !important;
+  color: var(--ink) !important;
+  border: 1px solid var(--line) !important;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--accent) !important;
+  outline: none;
+}
